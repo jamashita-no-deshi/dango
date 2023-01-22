@@ -6,7 +6,8 @@ const IndexPage: NextPage = (): ReactElement => {
   const [count, setCount] = useState<number>(0);
   let [num1, setNum1] = useState<number>(0);
   let [num2, setNum2] = useState<number>(0);
-  let [text, setText] = useState("");   {/*  なんで let [text, setText]  だとコンパイルエラーになるのか */}
+  let [text, setText] = useState<string>('');  {/*  なんで const [text, setText]  だとコンパイルエラーになるのか */}
+  const [operator, setOperator] = useState<string>('');
 
   return (
     <div className="m-10 p-4 w-2/3 mx-auto shadow-lg border-6 rounded-2xl">
